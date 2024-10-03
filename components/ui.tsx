@@ -97,7 +97,7 @@ export default function UI() {
         <p className="my-3 text-lg">Packed with features and improvements ready to <br /> power your projects for the next two years.</p>
         <div className="flex gap-3">
           <button className="bg-zinc-200 text-black px-3 py-1 rounded-md font-medium">Download</button>
-          <button className="bg-zinc-200/30 text-white px-3 py-1 rounded-md font-medium">What's New</button>
+          <button className="bg-zinc-200/30 text-white px-3 py-1 rounded-md font-medium">What&apos; New</button>
         </div>
 
       </div>

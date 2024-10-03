@@ -1,7 +1,6 @@
 "use client";
 import {Canvas} from '@react-three/fiber'
 import { GizmoHelper, GizmoViewport, Grid, OrbitControls, Outlines, PerspectiveCamera} from '@react-three/drei'
-import Image from 'next/image';
 import UI from './ui';
 
 
