@@ -11,7 +11,7 @@ export default function UI() {
             <Image src="/icons/view3d.svg" alt="view3d" width={20} height={20} />
             <Image src="/icons/downarrow_hlt.svg" alt="downarrow" width={18} height={18} />
           </span>
-          <span title='Object mode' className="bg-[#141414] flex items-center text-nowrap h-5 rounded-sm text-xs leading-5 text-center text-zinc-200 hover:bg-[#313131]">
+          <span title='Interaction mode' className="bg-[#141414] flex items-center text-nowrap h-5 rounded-sm text-xs leading-5 text-center text-zinc-200 hover:bg-[#313131]">
             <Image src="/icons/object_data.svg" alt="object mode" width={20} height={20} />
             Object Mode
             <Image src="/icons/downarrow_hlt.svg" alt="downarrow" width={18} height={18} />
