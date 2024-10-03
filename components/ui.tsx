@@ -16,7 +16,7 @@ export default function UI() {
             Object Mode
             <Image src="/icons/downarrow_hlt.svg" alt="downarrow" width={18} height={18} />
           </span>
-          <span className=" h-5 rounded-sm inline-block">
+          <span className=" h-5 rounded-sm hidden sm:inline-block">
             <ul className='flex text-xs *:px-1 *:rounded-sm leading-5 text-zinc-200 hover:*:bg-blue-500/30'>
               <li>View</li>
               <li>Select</li>
@@ -49,7 +49,7 @@ export default function UI() {
           </span>
         </div>
 
-        <div className=" h-5 rounded-sm text-xs leading-5 sm:flex gap-1 items-center hidden">
+        <div className=" h-5 rounded-sm text-xs leading-5 flex gap-1 items-center">
           <span title='visibility' className="bg-[#141414] rounded-sm hover:bg-[#313131] flex items-center">
             <Image src="/icons/visual_selection_selectable.svg" alt="visual selection" width={22} height={22} />
             <Image src="/icons/downarrow_hlt.svg" alt="downarrow" width={18} height={18} className='-ml-1' />
@@ -77,27 +77,27 @@ export default function UI() {
       </div>
 
       <div className="absolute top-40 right-3 flex flex-col gap-2 *:rounded-full select-none">
-        <div className="bg-[#141414] size-8 flex items-center justify-center hover:bg-[#1f1f1f]">
-          <Image src="/icons/view_zoom.svg" alt="pan" width={25} height={25} />
+        <div title="zoom" className="bg-[#141414] size-8 flex items-center justify-center hover:bg-[#1f1f1f]">
+          <Image src="/icons/view_zoom.svg" alt="zoom" width={25} height={25} />
         </div>
-        <div className="bg-[#141414] size-8 flex items-center justify-center hover:bg-[#1f1f1f]">
+        <div title="pan" className="bg-[#141414] size-8 flex items-center justify-center hover:bg-[#1f1f1f]">
           <Image src="/icons/view_pan.svg" alt="pan" width={25} height={25} />
         </div>
-        <div className="bg-[#141414] size-8 flex items-center justify-center hover:bg-[#1f1f1f]">
-          <Image src="/icons/view_camera.svg" alt="pan" width={25} height={25} />
+        <div title="camera" className="bg-[#141414] size-8 flex items-center justify-center hover:bg-[#1f1f1f]">
+          <Image src="/icons/view_camera.svg" alt="camera" width={25} height={25} />
         </div>
-        <div className="bg-[#141414] size-8 flex items-center justify-center hover:bg-[#1f1f1f]">
-          <Image src="/icons/view_perspective.svg" alt="pan" width={25} height={25} />
+        <div title="perspective" className="bg-[#141414] size-8 flex items-center justify-center hover:bg-[#1f1f1f]">
+          <Image src="/icons/view_perspective.svg" alt="perspective" width={25} height={25} />
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 p-5 cursor-default bg-gradient-to-t from-black/50 to-transparent w-full select-none">
+      <div className="absolute bottom-0 left-0 p-5 cursor-default bg-gradient-to-t from-black/50 to-transparent w-full">
 
         <h1 className="text-5xl font-extrabold">Blender 4.2 LTS</h1>
         <p className="my-3 text-lg">Packed with features and improvements ready to <br /> power your projects for the next two years.</p>
-        <div className="flex gap-3">
-          <button className="bg-zinc-200 text-black px-3 py-1 rounded-md font-medium">Download</button>
-          <button className="bg-zinc-200/30 text-white px-3 py-1 rounded-md font-medium">What&apos; New</button>
+        <div className="flex gap-3 select-none">
+          <button className="bg-zinc-300 hover:bg-zinc-50 transition text-black px-3 py-1 rounded-md font-medium">Download</button>
+          <button className="bg-zinc-200/30 hover:bg-zinc-200/40 transition text-white px-3 py-1 rounded-md font-medium">What&apos; New</button>
         </div>
 
       </div>

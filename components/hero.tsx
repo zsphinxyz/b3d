@@ -8,7 +8,7 @@ export default function Hero() {
 
   return (
     <main className="w-full h-[720px] flex flex-col border relative max-w-screen-2xl mx-auto bg-[#222]">
-      <Canvas className="">
+      <Canvas>
 
         <mesh>
           <boxGeometry args={[1,1,1]} />
