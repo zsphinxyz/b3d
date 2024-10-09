@@ -54,11 +54,9 @@ export default function Features() {
           </div>
 
           <div className="basis-1/2 min-h-80 select-none self-stretch transparent">
-            {/* <Image draggable={false} src="/ghost.jpg" alt="Cycles" width={500} height={500} quality={100} className="w-full h-full max-h-[500px] object-cover object-center" /> */}
-            <Canvas className="h-full !min-h-80">
-              {/* <Model /> */}
+            {/* <Canvas className="h-full !min-h-80">
               <OrbitControls />
-            </Canvas>
+            </Canvas> */}
           </div>
 
         </div>
@@ -84,11 +82,10 @@ export default function Features() {
           </div>
 
           <div className="basis-1/2 min-h-80 select-none self-stretch transparent">
-            <Canvas className="w-full self-stretch min-h-80 h-full">
-              
+            {/* <Canvas className="w-full self-stretch min-h-80 h-full">
               <OrbitControls enablePan={false} enableZoom={false} />
               <PerspectiveCamera makeDefault position={[0,20,30]} />
-            </Canvas>
+            </Canvas> */}
           </div>
 
         </div>

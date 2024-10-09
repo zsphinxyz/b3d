@@ -42,11 +42,11 @@ export function CubeAni() {
         <Suspense fallback={null}>
           <Cube aniStyle={aniStyle} />
         </Suspense>
-        <Loader />
         <BlenderGrid />
         <PerspectiveCamera makeDefault position={[5, 5, 5]} />
         <OrbitControls enablePan={false} enableZoom={false} />
       </Canvas>
+      <Loader />
       <div className="absolute top-2 right-2">
         <select name="ani" id="ani" value={aniStyle} onChange={(e: ChangeEvent<HTMLSelectElement>) => changeAni(e)}>
           <option value="ANI-Cube_walk">Male Walk</option>
