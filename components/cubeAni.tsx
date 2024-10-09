@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.5.0 .\public\cube_run.glb -t
 */
 
 import * as THREE from 'three'
-import React, { Suspense, useEffect, useMemo,useState } from 'react'
+import React, { ChangeEvent, Suspense, useEffect, useMemo,useState } from 'react'
 import { Canvas, useGraph } from '@react-three/fiber'
 import { useGLTF, useAnimations, PerspectiveCamera, OrbitControls, Loader } from '@react-three/drei'
 import { GLTF, SkeletonUtils } from 'three-stdlib'
@@ -32,7 +32,7 @@ type GLTFResult = GLTF & {
 export function CubeAni() {
   const [aniStyle, setAniStyle] = useState('ANI-Cube_walk')
 
-  function changeAni(e:any) {
+  function changeAni(e: React.ChangeEvent<HTMLSelectElement>) {
     setAniStyle(e.target.value)
   }
 
@@ -48,7 +48,7 @@ export function CubeAni() {
         <OrbitControls enablePan={false} enableZoom={false} />
       </Canvas>
       <div className="absolute top-2 right-2">
-        <select name="ani" id="ani" value={aniStyle} onChange={changeAni}>
+        <select name="ani" id="ani" value={aniStyle} onChange={(e: ChangeEvent<HTMLSelectElement>) => changeAni(e)}>
           <option value="ANI-Cube_walk">Male Walk</option>
           <option value="ANI-cube_female_walk">Female Walk</option>
           <option value="ANI-Cube_run">Run</option>
