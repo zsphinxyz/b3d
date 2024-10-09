@@ -1,7 +1,6 @@
 'use client'
 
 import Image from "next/image";
-import { Model } from '@/components/Test'
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { CubeAni } from "./cubeAni";

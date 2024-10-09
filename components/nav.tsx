@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 export default function Nav() {
   return (
     <nav className="bg-white">

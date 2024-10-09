@@ -2,8 +2,8 @@
 import {Canvas} from '@react-three/fiber'
 import { GizmoHelper, GizmoViewport, Grid, Loader, OrbitControls, Outlines, PerspectiveCamera} from '@react-three/drei'
 import UI from './ui';
-import { useEffect, useRef, useState } from 'react';
-import BlenderGrid from './blenderGrid';
+import { useState } from 'react';
+import BlenderGrid from '@/components/blenderGrid';
 
 
 export default function Hero() {
@@ -12,7 +12,7 @@ export default function Hero() {
   const [del, setDel] = useState(false);
   const [canvasClick, setCanvasClick] = useState(false)
 
-  const canvas = useRef<HTMLCanvasElement>()
+
 
   function handleCubeClick() {
     setCubeClick(!cubeClick)

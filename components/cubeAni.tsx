@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.5.0 .\public\cube_run.glb -t
 */
 
 import * as THREE from 'three'
-import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react'
+import React, { Suspense, useEffect, useMemo,useState } from 'react'
 import { Canvas, useGraph } from '@react-three/fiber'
 import { useGLTF, useAnimations, PerspectiveCamera, OrbitControls, Loader } from '@react-three/drei'
 import { GLTF, SkeletonUtils } from 'three-stdlib'
