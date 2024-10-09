@@ -64,7 +64,7 @@ export function CubeAni() {
   )
 }
 
-const Cube: React.FC<any> = ({ aniStyle, ...otherProps }) => {
+const Cube = ({ aniStyle, ...otherProps }: {aniStyle: string}) => {
   
   const group = React.useRef<THREE.Group>(null)
   const { scene, animations } = useGLTF('/cube_run.glb')
