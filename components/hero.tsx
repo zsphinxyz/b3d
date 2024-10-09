@@ -1,60 +1,77 @@
 "use client";
 import {Canvas} from '@react-three/fiber'
-import { GizmoHelper, GizmoViewport, Grid, OrbitControls, Outlines, PerspectiveCamera} from '@react-three/drei'
+import { GizmoHelper, GizmoViewport, Grid, Loader, OrbitControls, Outlines, PerspectiveCamera} from '@react-three/drei'
 import UI from './ui';
+import { useEffect, useRef, useState } from 'react';
+import BlenderGrid from './blenderGrid';
 
 
 export default function Hero() {
 
+  const [cubeClick, setCubeClick] = useState(false);
+  const [del, setDel] = useState(false);
+  const [canvasClick, setCanvasClick] = useState(false)
+
+  const canvas = useRef<HTMLCanvasElement>()
+
+  function handleCubeClick() {
+    setCubeClick(!cubeClick)
+  }
+
+  function deleteCube() {
+    setDel(true)
+    setCubeClick(false)
+  }
+
+  function addCube() {
+    setCubeClick(false)
+    setDel(false)
+    setCanvasClick(false)
+  }
+
+  function reset() {
+    setCubeClick(false)
+    setCanvasClick(false)
+  }
+
+  function handleCanvasClick() {
+    del && setCanvasClick(!canvasClick)
+  }
+
+
+
   return (
     <main className="w-full h-[720px] flex flex-col border relative max-w-screen-2xl mx-auto bg-[#222]">
-      <Canvas>
+      {
+        cubeClick &&
+        <div className="absolute z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <button className='bg-blue-500 text-white w-max px-4 py-0.5 rounded-sm text-sm shadow shadow-black/50 select-none' onClick={deleteCube}>Delete</button>
+        </div>
+      }
 
-        <mesh>
+      {
+        del && canvasClick &&
+        <div className="absolute z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <button className='bg-blue-500 text-white w-max px-4 py-0.5 rounded-sm text-sm shadow shadow-black/50 select-none' onClick={addCube}>Add Cube</button>
+        </div>
+      }
+      <Canvas id='canvas' onMouseDown={reset} onContextMenu={handleCanvasClick}>
+
+        {!del ? <mesh onContextMenu={handleCubeClick}>
           <boxGeometry args={[1,1,1]} />
-          {/* <meshStandardMaterial color="#454545" /> */}
-          <meshMatcapMaterial color='#a1a1a1' />
-          <Outlines thickness={2} color='#FFA028' />
-        </mesh>
+          <meshMatcapMaterial color='#a1a1af' />
+          <Outlines thickness={2.5} color='#FFA028' />
+        </mesh> : ''}
 
         <group name='Light&Camera'>
           <ambientLight intensity={1} />
-          <directionalLight position={[0.3, 0.5, 0.5]} intensity={10} />
-          <PerspectiveCamera makeDefault position={[0, 0, -5]} />
         </group>
 
         <group name='UI'>
           <OrbitControls minZoom={4} maxZoom={5} enablePan={false} enableZoom={false}  />
-          <PerspectiveCamera makeDefault position={[3, 3, 5]} />
+          <PerspectiveCamera makeDefault position={[4, 4, 4]} />
 
-          <Grid position={[0, 0.01, 0]} args={[1, 100]} 
-            cellSize={0} 
-            cellThickness={0.7}
-            sectionSize={100} 
-            sectionThickness={1.25}
-            sectionColor={'#8BDC00'}
-            fadeDistance={20}
-            fadeStrength={1}
-          />
-          <Grid position={[0, 0, 0]} args={[100, 1]} 
-            cellSize={0} 
-            cellThickness={0.7}
-            sectionSize={100} 
-            sectionThickness={1.25}
-            sectionColor={'#FF3352'}
-            fadeDistance={20}
-            fadeStrength={1}
-          />
-
-          <Grid position={[0, 0, 0]} args={[100, 100]} 
-            cellSize={0.5} 
-            cellThickness={0.7} 
-            cellColor={'#545454'} 
-            sectionSize={0} 
-            sectionThickness={0}
-            fadeDistance={20}
-            fadeStrength={1}
-          />
+          <BlenderGrid />
 
           <GizmoHelper
             alignment="top-right"
@@ -65,6 +82,7 @@ export default function Hero() {
         </group>
 
       </Canvas>
+      <Loader />
 
       <UI />
 

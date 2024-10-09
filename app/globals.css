@@ -7,12 +7,12 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -24,4 +24,111 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .transparent{
+    background-color: #2a2a2a;
+    opacity: 1;
+    background-image:  repeating-linear-gradient(45deg, #363636 25%, transparent 25%, transparent 75%, #363636 75%, #363636), repeating-linear-gradient(45deg, #363636 25%, #2a2a2a 25%, #2a2a2a 75%, #363636 75%, #363636);
+    background-position: 0 0, 9px 9px;
+    background-size: 18px 18px;
+  }
+
+  .mask {
+    clip-path: polygon(25% 0, 25% 11%, 25% 23%, 25% 50%, 13% 50%, 0 50%, 0 0);
+    animation: ani 10s steps(1) infinite;
+  }
+
+  .borderCorner {
+    position: absolute;
+    inset: 0;
+    width: 25%;
+    height: 50%;
+    border: solid 3px lime;
+    mix-blend-mode: screen;
+    animation: corner 10s steps(1) infinite;
+  }
+
+  .borderCorner::before, .borderCorner::after {
+    content: '';
+    position: absolute;
+  }
+  .borderCorner::before{
+    width: calc(100% + 10px);
+    height: calc(100% - 10px);
+    left: -5px;
+    top: 5px;
+    background: black;
+  }
+  .borderCorner::after{
+    left: 5px;
+    top: -5px;
+    background: black;
+    width: calc(100% - 10px);
+    height: calc(100% + 10px);
+  }
+
+
+  @keyframes corner {
+    18%{
+      top: 50%;
+      left: 0;
+    }
+    28%{
+      left: 25%;
+      top: 0;
+    }
+    38%{
+      left: 25%;
+      top: 50%;
+    }
+    48%{
+      left: 50%;
+      top: 0%;
+    }
+    58%{
+      left: 50%;
+      top: 50%;
+    }
+    68%{
+      left: 75%;
+      top: 0;
+    }
+    78%{
+      left: 75%;
+      top: 50%;
+    }
+    85%{
+      display: none;
+    }
+
+  }
+
+  @keyframes ani{
+    10% {
+      clip-path: polygon(25% 0, 25% 11%, 25% 23%, 25% 50%, 13% 50%, 0 50%, 0 0);
+    }
+    20% {
+      clip-path: polygon(25% 0, 25% 11%, 25% 23%, 25% 100%, 12% 100%, 0 100%, 0 0);
+    }
+    30% {
+      clip-path: polygon(25% 0, 50% 0, 50% 50%, 25% 50%, 25% 100%, 0 100%, 0 0);
+    }
+    40% {
+      clip-path: polygon(25% 0, 50% 0, 50% 100%, 38% 100%, 25% 100%, 0 100%, 0 0);
+    }
+    50%{
+      clip-path: polygon(75% 0, 75% 50%, 50% 50%, 50% 100%, 25% 100%, 0 100%, 0 0);
+    }
+    60%{
+      clip-path: polygon(75% 0, 75% 50%, 75% 100%, 50% 100%, 25% 100%, 0 100%, 0 0);
+    }
+    70%{
+      clip-path: polygon(100% 0, 100% 50%, 75% 50%, 75% 100%, 25% 100%, 0 100%, 0 0);
+    }
+    80%{
+      clip-path: polygon(100% 0, 100% 50%, 100% 100%, 75% 100%, 25% 100%, 0 100%, 0 0);
+    }
+
+  }
+
 }
