@@ -1,6 +1,6 @@
 "use client";
 import {Canvas} from '@react-three/fiber'
-import { GizmoHelper, GizmoViewport, Loader, OrbitControls, Outlines, PerspectiveCamera} from '@react-three/drei'
+import { GizmoHelper, GizmoViewport, OrbitControls, Outlines, PerspectiveCamera} from '@react-three/drei'
 import UI from './ui';
 import { useState } from 'react';
 import BlenderGrid from '@/components/blenderGrid';
@@ -39,7 +39,7 @@ export default function Hero() {
 
 
   return (
-    <main className="w-full h-[720px] flex flex-col border relative max-w-screen-2xl mx-auto bg-[#222]">
+    <div className="w-full h-[720px] flex flex-col border relative max-w-screen-2xl mx-auto bg-[#222]">
       {
         cubeClick &&
         <div className="absolute z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -66,7 +66,7 @@ export default function Hero() {
         </group>
 
         <group name='UI'>
-          <OrbitControls minZoom={4} maxZoom={5} enablePan={false} enableZoom={false}  />
+          <OrbitControls minZoom={4} maxZoom={5} enablePan={false} enableZoom={false} enableDamping={false} />
           <PerspectiveCamera makeDefault position={[4, 4, 4]} />
 
           <BlenderGrid />
@@ -80,10 +80,8 @@ export default function Hero() {
         </group>
 
       </Canvas>
-      <Loader />
 
       <UI />
-
-    </main>
+    </div>
   )
 }

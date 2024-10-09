@@ -4,6 +4,9 @@ import Image from "next/image";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { CubeAni } from "./cubeAni";
+import ReadMore from "./readMore";
+import { CubeModel } from "./CubeModel";
+import BlenderGrid from "./blenderGrid";
 
 export default function Features() {
   return (
@@ -11,7 +14,7 @@ export default function Features() {
       <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-stone-700 mb-20">Everything You Need</h1>
 
       <div className="flex flex-col md:flex-row gap-5 justify-center items-center w-full">
-        <div className="text-zinc-700 self-stretch basis-1/2 ">
+        <div className="text-zinc-700 self-stretch basis-1/2  ">
           <h2 className="text-5xl font-bold mb-5">Rendering</h2>
           <p className="my-3 text-lg md:text-xl leading-loose">
             Create jaw-dropping renders thanks to Cycles, high-end production path tracer.
@@ -22,7 +25,7 @@ export default function Features() {
             <li className="">FreeStyle Rendering</li>
             <li className="">Eevee Rendering</li>
           </ul>
-          <a href="http://" className="text-lg text-blue-500 font-medium hover:underline uppercase">Read More</a>
+          <ReadMore link="" />
         </div>
 
         <div className="basis-1/2 relative select-none">
@@ -50,13 +53,15 @@ export default function Features() {
               <li className="">Grid and Bridge fill</li>
               <li className="">Python scripting for custom tools and add-ons</li>
             </ul>
-            <a href="http://" className="text-lg text-blue-500 font-medium hover:underline uppercase">Read More</a>
+            <ReadMore link="" />
           </div>
 
-          <div className="basis-1/2 min-h-80 select-none self-stretch transparent">
-            {/* <Canvas className="h-full !min-h-80">
-              <OrbitControls />
-            </Canvas> */}
+          <div className="basis-1/2 min-h-80 select-none self-stretch bg-[#222]">
+            <Canvas className="h-full !min-h-80" camera={{fov: 80, position: [1,4,5], zoom:1.5, isPerspectiveCamera: true}} >
+              <CubeModel />
+              <OrbitControls enablePan={false} enableZoom={false} enableDamping={false} />
+              <BlenderGrid />
+            </Canvas>
           </div>
 
         </div>

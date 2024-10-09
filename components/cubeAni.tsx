@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.5.0 .\public\cube_run.glb -t
 import * as THREE from 'three'
 import React, { ChangeEvent, Suspense, useEffect, useMemo, useState } from 'react'
 import { Canvas, useGraph } from '@react-three/fiber'
-import { useGLTF, useAnimations, PerspectiveCamera, OrbitControls, Loader } from '@react-three/drei'
+import { useGLTF, useAnimations, PerspectiveCamera, OrbitControls } from '@react-three/drei'
 import { GLTF, SkeletonUtils } from 'three-stdlib'
 import BlenderGrid from './blenderGrid'
 
@@ -44,12 +44,11 @@ export function CubeAni() {
         </Suspense>
         <BlenderGrid />
         <PerspectiveCamera makeDefault position={[5, 5, 5]} />
-        <OrbitControls enablePan={false} enableZoom={false} />
+        <OrbitControls enablePan={false} enableZoom={false} enableDamping={false}/>
       </Canvas>
-      <Loader />
       <div className="absolute top-2 right-2">
-        <select name="ani" id="ani" value={aniStyle} onChange={(e: ChangeEvent<HTMLSelectElement>) => changeAni(e)}>
-          <option value="ANI-Cube_walk">Male Walk</option>
+        <select aria-label='Animations' name="ani" id="ani" value={aniStyle} onChange={(e: ChangeEvent<HTMLSelectElement>) => changeAni(e)}>
+          <option value="ANI-Cube_walk">Walk</option>
           <option value="ANI-cube_female_walk">Female Walk</option>
           <option value="ANI-Cube_run">Run</option>
           <option value="ANI-Cube_walk_jolly">Jolly</option>
@@ -80,25 +79,25 @@ const Cube = ({ aniStyle, ...otherProps }: {aniStyle: string}) => {
   })
 
   return (
-        <group ref={group} {...otherProps} dispose={null}>
-          <group name="Scene">
-            <group name="RIG-Cube">
-              <primitive object={nodes['P-Root']} />
-              <primitive object={nodes['ParentSwitch-FootL']} />
-              <primitive object={nodes['ParentSwitch-FootR']} />
-              <skinnedMesh name="GEO-Cube" geometry={nodes['GEO-Cube'].geometry} material={materials.Gray} skeleton={nodes['GEO-Cube'].skeleton}>
-                <meshMatcapMaterial />
-              </skinnedMesh>
-            </group>
-            <group name="WGT-Circle" position={[1, 1, -1]} rotation={[Math.PI / 2, 0, 0]} scale={0.747} />
-            <group name="WGT-Cube" position={[4, 0, -8]} />
-            <group name="WGT-Root" position={[12, 0, -6]} />
-            <group name="WGT-Sphere_XY" position={[14, 0, -4]} />
-            <group name="WGT-Square" position={[14, 0, -6]} />
-            <group name="WGT-Torso_Master" position={[16, 0, 0]} />
-            <group name="WGT-Axes_6" position={[2, 0, 0]} />
-          </group>
+    <group ref={group} {...otherProps} dispose={null}>
+      <group name="Scene">
+        <group name="RIG-Cube">
+          <primitive object={nodes['P-Root']} />
+          <primitive object={nodes['ParentSwitch-FootL']} />
+          <primitive object={nodes['ParentSwitch-FootR']} />
+          <skinnedMesh name="GEO-Cube" geometry={nodes['GEO-Cube'].geometry} material={materials.Gray} skeleton={nodes['GEO-Cube'].skeleton}>
+            <meshMatcapMaterial color='#ccccff' />
+          </skinnedMesh>
         </group>
+        <group name="WGT-Circle" position={[1, 1, -1]} rotation={[Math.PI / 2, 0, 0]} scale={0.747} />
+        <group name="WGT-Cube" position={[4, 0, -8]} />
+        <group name="WGT-Root" position={[12, 0, -6]} />
+        <group name="WGT-Sphere_XY" position={[14, 0, -4]} />
+        <group name="WGT-Square" position={[14, 0, -6]} />
+        <group name="WGT-Torso_Master" position={[16, 0, 0]} />
+        <group name="WGT-Axes_6" position={[2, 0, 0]} />
+      </group>
+    </group>
   )
 }
 
