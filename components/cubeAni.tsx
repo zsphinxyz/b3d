@@ -77,7 +77,7 @@ const Cube: React.FC<any> = ({ aniStyle, ...otherProps }) => {
   useEffect(() => {
     aniStylesArr.map( i => actions[i]?.stop())
     actions[aniStyle]!.play()
-  }, [aniStyle])
+  })
 
   return (
         <group ref={group} {...otherProps} dispose={null}>

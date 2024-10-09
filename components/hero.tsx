@@ -1,6 +1,6 @@
 "use client";
 import {Canvas} from '@react-three/fiber'
-import { GizmoHelper, GizmoViewport, Grid, Loader, OrbitControls, Outlines, PerspectiveCamera} from '@react-three/drei'
+import { GizmoHelper, GizmoViewport, Loader, OrbitControls, Outlines, PerspectiveCamera} from '@react-three/drei'
 import UI from './ui';
 import { useState } from 'react';
 import BlenderGrid from '@/components/blenderGrid';
@@ -11,8 +11,6 @@ export default function Hero() {
   const [cubeClick, setCubeClick] = useState(false);
   const [del, setDel] = useState(false);
   const [canvasClick, setCanvasClick] = useState(false)
-
-
 
   function handleCubeClick() {
     setCubeClick(!cubeClick)
