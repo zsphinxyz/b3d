@@ -33,7 +33,7 @@ export default function Hero() {
   }
 
   function handleCanvasClick() {
-    del ? setCanvasClick(!canvasClick) : '';
+   setCanvasClick(del ? true : false)
   }
 
 
