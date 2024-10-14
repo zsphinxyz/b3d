@@ -38,7 +38,7 @@ export function CubeAni() {
 
   return(
     <div className="basis-1/2 min-h-80 select-none self-stretch transparentt bg-[#222] relative">
-      <Canvas className="h-full !min-h-80">
+      <Canvas className="h-full !min-h-80" style={{height: '320px'}}>
         <Suspense fallback={null}>
           <Cube aniStyle={aniStyle} />
         </Suspense>
