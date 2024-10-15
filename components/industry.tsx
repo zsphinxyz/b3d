@@ -15,7 +15,7 @@ export default function Industry() {
       <section className="p-5 border border-blue-500 rounded-lg bg-blue-700/5">
         <h1 className="text-3xl sm:text-5xl font-black text-blue-500 mb-3">Part of the Industry</h1>
         <p className="md:text-lg md:w-9/12">
-          Blender is a member of ASWF, Khronos, Linux Foundation and OIN. It’s also well supported by major hardware vendors such as AMD, Apple, Intel, and NVIDIA.
+          Blender is a member of ASWF, Khronos, Linux Foundation and OIN. It&apos;s also well supported by major hardware vendors such as AMD, Apple, Intel, and NVIDIA.
         </p>
 
         <div className="flex gap-5 items-center justify-around flex-wrap">
