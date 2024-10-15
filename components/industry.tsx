@@ -51,7 +51,7 @@ export default function Industry() {
       </section>
 
       <section className="p-5 border border-purple-500 rounded-lg bg-purple-700/5">
-        <h1 className="text-3xl sm:text-5xl font-black text-purple-500 mb-3">It's about People.</h1>
+        <h1 className="text-3xl sm:text-5xl font-black text-purple-500 mb-3">It&apos;s about People.</h1>
         <p className="md:text-lg md:w-9/12 mb-10">
           Designers, developers, engineers, artists. All driven by passion. All using Blender to make an impact.
         </p>
