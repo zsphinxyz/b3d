@@ -50,15 +50,15 @@ export default function UI() {
         </div>
 
         <div className=" h-5 rounded-sm text-xs leading-5 flex gap-1 items-center">
-          <span title='visibility' className="bg-[#141414] rounded-sm hover:bg-[#313131] flex items-center">
+          <span title='visibility' className="bg-[#141414] hidden rounded-sm hover:bg-[#313131] min-[420px]:flex items-center">
             <Image draggable={false} src="/icons/visual_selection_selectable.svg" alt="visual selection" width={22} height={22} />
             <Image draggable={false} src="/icons/downarrow_hlt.svg" alt="downarrow" width={18} height={18} className='-ml-1' />
           </span>
-          <span title='Gizmos' className="bg-[#141414] rounded-sm hover:bg-[#313131] flex items-center">
+          <span title='Gizmos' className="bg-[#141414] hidden rounded-sm hover:bg-[#313131] min-[400px]:flex items-center">
             <Image draggable={false} src="/icons/gizmo.svg" alt="gizmo" width={22} height={22} className='bg-blue-500/50' />
             <Image draggable={false} src="/icons/downarrow_hlt.svg" alt="downarrow" width={18} height={18} className='-ml-1' />
           </span>
-          <span title='Overlays' className="bg-[#141414] rounded-sm hover:bg-[#313131] flex items-center">
+          <span title='Overlays' className="bg-[#141414] hidden rounded-sm hover:bg-[#313131] min-[340px]:flex items-center">
             <Image draggable={false} src="/icons/overlay.svg" alt="overlay" width={22} height={22} className='bg-blue-500/50' />
             <Image draggable={false} src="/icons/downarrow_hlt.svg" alt="downarrow" width={18} height={18} className='-ml-1' />
           </span>
@@ -92,7 +92,7 @@ export default function UI() {
       </div>
 
       <div className="absolute bottom-0 left-0 p-5 cursor-default bg-gradient-to-t from-black/50 to-transparent w-full text-white">
-        <h1 className="text-5xl sm:text-6xl font-black font-sans block select-auto w-max">Blender 4.2 LTS</h1>
+        <h1 className="text-4xl sm:text-6xl font-black font-sans block select-auto w-max">Blender 4.2 LTS</h1>
         <p className="my-3 text-lg">Packed with features and improvements ready to <br /> power your projects for the next two years.</p>
         <div className="flex gap-3 select-none">
           <button className="bg-zinc-300 hover:bg-zinc-50 transition text-black px-8 py-1 rounded-md font-medium">Download</button>
