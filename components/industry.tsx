@@ -61,15 +61,15 @@ export default function Industry() {
           <a href="https://www.youtube.com/playlist?list=PLa1F2ddGya_87HJ72v_IgKUTNLIXSMfvB" target="_blank" className="w-full min-h-32 max-h-36 md:max-h-full md:w-40 lg:w-52 border border-white/10 hover:bg-white/5 p-1 rounded-md shrink-0 mx-auto flex gap-2 md:flex-col self-stretch">
             <Image src='/pablo.jpg' alt="story" width={500} height={500} className="w-20 h-auto object-cover rounded-md self-stretch md:w-40 lg:w-52" />
             <div className="overflow-hidden">
-              <p className="text-xl md:text-sm lg:text-base md:text-center font-medium mb-2 text-neutral-500">Connecting Blender Community</p>
-              <span className="text-sm block leading-tight md:hidden">Weekly live show highlighting what's new in Blender and its community. Hosted by Pablo Vazquez since 2018.</span>
+              <p className="text-xl md:text-sm lg:text-base md:text-center font-medium mb-2 text-neutral-400">Connecting Blender Community</p>
+              <span className="text-sm block leading-tight md:hidden">Weekly live show highlighting what&apos;s new in Blender and its community. Hosted by Pablo Vazquez since 2018.</span>
             </div>
           </a>
 
           <a href="https://www.youtube.com/watch?v=23m0eG1Qr1c" target="_blank" className="w-full min-h-32 max-h-36 md:max-h-full md:w-40 lg:w-52 border border-white/10 hover:bg-white/5 p-1 rounded-md shrink-0 mx-auto flex gap-2 md:flex-col self-stretch">
             <Image src='/daniel_martinez.jpg' alt="story" width={500} height={500} className="w-20 h-auto object-left object-cover rounded-md self-stretch md:w-40 lg:w-52" />
             <div className="overflow-hidden">
-              <p className="text-xl md:text-sm lg:text-base md:text-center font-medium mb-2 text-neutral-500">Showcasing Blender at industry events</p>
+              <p className="text-xl md:text-sm lg:text-base md:text-center font-medium mb-2 text-neutral-400">Showcasing Blender at industry events</p>
               <span className="text-sm block leading-tight md:hidden">The Blender team is back from the Annecy International Animation Film Festival 2018 and MIFA, the industry marketplace which takes place during the festival.</span>
             </div>
           </a>
@@ -77,7 +77,7 @@ export default function Industry() {
           <a href="https://www.youtube.com/watch?v=whPWKecazgM" target="_blank" className="w-full min-h-32 max-h-36 md:max-h-full md:w-40 lg:w-52 border border-white/10 hover:bg-white/5 p-1 rounded-md shrink-0 mx-auto flex gap-2 md:flex-col self-stretch">
             <Image src='/ian_hubert.jpg' alt="Ian Hubert" width={500} height={500} className="w-20 h-auto object-cover rounded-md self-stretch md:w-40 lg:w-52" />
             <div className="overflow-hidden">
-              <p className="text-xl md:text-sm lg:text-base md:text-center font-medium mb-2 text-neutral-500">Creating Worlds at BCON19</p>
+              <p className="text-xl md:text-sm lg:text-base md:text-center font-medium mb-2 text-neutral-400">Creating Worlds at BCON19</p>
               <span className="text-sm block leading-tight md:hidden">World Building in Blender Conference 2019 (BCON19) - Ian Hubert</span>
             </div>
           </a>
@@ -85,8 +85,8 @@ export default function Industry() {
           <a href="https://mastodon.social/tags/geometrynodes" target="_blank" className="w-full min-h-32 max-h-36 md:max-h-full md:w-40 lg:w-52 border border-white/10 hover:bg-white/5 p-1 rounded-md shrink-0 mx-auto flex gap-2 md:flex-col self-stretch">
             <Image src='/nodevember.jpg' alt="story" width={500} height={500} className="w-20 h-auto object-left object-cover rounded-md self-stretch md:w-40 lg:w-52" />
             <div className="overflow-hidden">
-              <p className="text-xl md:text-sm lg:text-base md:text-center font-medium mb-2 text-neutral-500">The demo scene with Nodevember</p>
-              <span className="text-sm block leading-tight md:hidden">Nodevember is a whole month dedicated to everything 'nodes'. It is about creating something procedural every (other) day and sharing it online.</span>
+              <p className="text-xl md:text-sm lg:text-base md:text-center font-medium mb-2 text-neutral-400">The demo scene with Nodevember</p>
+              <span className="text-sm block leading-tight md:hidden">Nodevember is a whole month dedicated to everything &apos;nodes&apos;. It is about creating something procedural every (other) day and sharing it online.</span>
             </div>
           </a>
 
