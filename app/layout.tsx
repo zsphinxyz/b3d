@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {Roboto} from 'next/font/google';
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 const roboto = Roboto({weight: ['100', '300', '400', '500', '700', '900'], variable: '--font-roboto', subsets: ['latin']})
 
@@ -16,6 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Analytics />
       <body
         className={`${roboto.className} antialiased overflow-y-hidden`}
       >

@@ -95,8 +95,12 @@ export default function UI() {
         <h1 className="text-4xl sm:text-6xl font-black font-sans block select-auto w-max">Blender 4.2 LTS</h1>
         <p className="my-3 text-lg">Packed with features and improvements ready to <br /> power your projects for the next two years.</p>
         <div className="flex gap-3 select-none">
-          <button className="bg-zinc-300 hover:bg-zinc-50 transition text-black px-8 py-1 rounded-md font-medium">Download</button>
-          <button className="bg-zinc-200/30 hover:bg-zinc-200/40 transition text-white px-5 py-1 rounded-md font-medium">What&apos; New</button>
+          <a href="https://www.blender.org/download/" className="">
+            <button className="bg-zinc-300 hover:bg-zinc-50 transition text-black px-8 py-1 rounded-md font-medium">Download</button>
+          </a>
+          <a href="https://www.blender.org/download/releases/4-2/" className="">
+            <button className="bg-zinc-200/30 hover:bg-zinc-200/40 transition text-white px-5 py-1 rounded-md font-medium">What&apos; New</button>
+          </a>
         </div>
       </div>
     </>
