@@ -6,6 +6,7 @@ import Free from "@/components/free";
 import More from "@/components/more";
 import FreeSoftware from "@/components/freeSoftware";
 import Industry from "@/components/industry";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -27,9 +28,10 @@ export default function Home() {
           <FreeSoftware />
           <Industry />
           <News />
-          <p className="text-center py-2 bg-green-300 text-xl text-green-700 my-5">In progress</p>
         </section>
       </section>
+
+      <Footer />
 
     </main>
   );

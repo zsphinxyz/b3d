@@ -11,7 +11,7 @@ import BlenderGrid from "./blenderGrid";
 export default function Features() {
   return (
     <section className="px-2 md:px-10">
-      <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-stone-700 mb-20">Everything You Need</h1>
+      <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-stone-700 mb-20 text-center">Everything You Need</h1>
 
       <div className="flex flex-col md:flex-row gap-5 justify-center items-center w-full">
         <div className="text-zinc-700 self-stretch basis-1/2  ">
