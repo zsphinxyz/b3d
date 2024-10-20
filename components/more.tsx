@@ -1,4 +1,4 @@
-import { TextAnimation, TextBlurAni } from './Animate'
+import { TextBlurAni } from './Animate'
 import Card from './card'
 
 export default function More() {

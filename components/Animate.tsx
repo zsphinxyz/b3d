@@ -1,6 +1,5 @@
 'use client'
-import {motion, stagger} from 'framer-motion'
-import { filter } from 'framer-motion/client'
+import {motion} from 'framer-motion'
 
 export function FadeIn({children, className}: {children: React.ReactNode, className?: string}) {
   return (
