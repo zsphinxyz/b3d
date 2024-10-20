@@ -7,7 +7,29 @@ const roboto = Roboto({weight: ['100', '300', '400', '500', '700', '900'], varia
 
 export const metadata: Metadata = {
   title: "Blender",
-  description: "New Ui implementation of Blender 3d | b3d | blender",
+  description: "Redesigning landing page of Blender website | 3d | b3d | blender | blender3d",
+  keywords: ['blender', 'b3d', 'blender3d', '3d', 'redesign'],
+  publisher: 'zsphinx',
+  creator: 'zsphinx',
+  openGraph: {
+    title: 'Blender',
+    description: 'Redesigning landing page of Blender website | 3d | b3d | blender | blender3d',
+    images: [{
+      url: 'https://b3d.vercel.app/thumbnail.jpg',
+      alt: 'Blender 3d',
+      width: 750,
+      height: 500,
+    }]
+  },
+  facebook: {
+    appId: '1719215081802374',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    creator: '@zsphinxyz'
+  },
+
 };
 
 export default function RootLayout({

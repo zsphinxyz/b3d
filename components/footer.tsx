@@ -11,7 +11,7 @@ function Block({text, href, title}: {text:string, href:string, title:string}) {
 
 export default function Footer() {
   return (
-  <footer className="bg-[#292d32] text-neutral-300 pt-10 pb-5 px-3 lg:px-5">
+  <footer className="bg-[#292d32] text-neutral-300 pt-10 pb-5 px-3 lg:px-5 w-full block max-w-screen-2xl mx-auto">
   <div className="">
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
       <div className="">
@@ -107,11 +107,11 @@ export default function Footer() {
     </div>
   </div>
     <p className="mt-8 max-w-[320px] font-light md:max-w-full text-sm text-center text-white/50 mx-auto">Artistic freedom starts with Blender &nbsp; 💖 &nbsp; The Free and Open Source 3D Creation Suite</p>
-    <p className="flex flex-col sm:flex-row gap-1 mt-5 justify-between px-3"> 
-      <span className="block ml-auto ">Website by <a href="https://linktr.ee/zsphinx" className="underline underline-offset-2 text-blue-400">zsphinx</a> </span>
+    <p className="flex flex-col sm:flex-row gap-1 mt-5 justify-between px-3 text-sm"> 
+      <span className="block ml-auto">Website by <a href="https://linktr.ee/zsphinx" target='_blank' className="underline underline-offset-2 text-blue-400">zsphinx</a> </span>
       <span className="block ml-auto">Web Contents credits: {' '}
-        <a className='underline underline-offset-2 text-blue-400' href="https://www.blender.org/">Blender</a> and {' '}
-        <a className='underline underline-offset-2 text-blue-400' href="https://studio.blender.org/">Blender Studio</a>
+        <a className='underline underline-offset-2 text-blue-400' target='_blank' href="https://www.blender.org/">Blender</a> and {' '}
+        <a className='underline underline-offset-2 text-blue-400' target='_blank' href="https://studio.blender.org/">Blender Studio</a>
       </span>
     </p>
 </footer>

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { FadeIn } from "./Animate"
 
 const imgs = [
   {logo: '/khronos.png', link: 'https://khronos.org/'},
@@ -12,7 +13,7 @@ export default function Industry() {
   return (
     <section className="px-5 cursor-default flex flex-col gap-5 text-neutral-400">
 
-      <section className="p-5 border border-blue-500 rounded-lg bg-blue-700/5">
+      <FadeIn className="p-5 border border-blue-500 rounded-lg bg-blue-700/5">
         <h1 className="text-3xl sm:text-5xl font-black text-blue-500 mb-3">Part of the Industry</h1>
         <p className="md:text-lg md:w-9/12">
           Blender is a member of ASWF, Khronos, Linux Foundation and OIN. It&apos;s also well supported by major hardware vendors such as AMD, Apple, Intel, and NVIDIA.
@@ -21,15 +22,15 @@ export default function Industry() {
         <div className="flex gap-5 items-center justify-around flex-wrap">
           {
             imgs.map( img => (
-              <a key={img.link} href={img.link}>
+              <a key={img.link} href={img.link} target="_blank">
                 <Image draggable={false} src={img.logo} alt={img.logo.replace('.png', '')} width={120} height={120} className="md:size-40 invert flex-shrink-0 p-3 object-contain aspect-square" />
               </a> 
             ))
           }
         </div>
-      </section>
+      </FadeIn>
 
-      <section className="p-5 border border-yellow-500 rounded-lg bg-yellow-700/5">
+      <FadeIn className="p-5 border border-yellow-500 rounded-lg bg-yellow-700/5">
           <h1 className="text-3xl sm:text-5xl font-black text-yellow-500 mb-3">The Ecosystem</h1>
           <p className="md:text-lg md:w-9/12 mb-10">
             Countless communities and thriving businesses are built around Blender. <br />Together, these tutorial makers and content creators, add-on developers and global marketplaces form an ever-expanding ecosystem.
@@ -48,9 +49,9 @@ export default function Industry() {
               <Image draggable={false} src='/blender_git.svg' alt="blender on github" width={442} height={109} className="invert"/>
             </a>
           </div>
-      </section>
+      </FadeIn>
 
-      <section className="p-5 border border-purple-500 rounded-lg bg-purple-500/5">
+      <FadeIn className="p-5 border border-purple-500 rounded-lg bg-purple-500/5">
         <h1 className="text-3xl sm:text-5xl font-black text-purple-500 mb-3">It&apos;s about People.</h1>
         <p className="md:text-lg md:w-9/12 mb-10">
           Designers, developers, engineers, artists. All driven by passion. All using Blender to make an impact.
@@ -92,7 +93,7 @@ export default function Industry() {
 
         </div>
 
-      </section>
+      </FadeIn>
 
     </section>
   )

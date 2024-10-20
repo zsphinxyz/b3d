@@ -93,7 +93,7 @@ export default function UI() {
 
       <div className="absolute bottom-0 left-0 p-5 cursor-default bg-gradient-to-t from-black/50 to-transparent w-full text-white">
         <h1 className="text-4xl sm:text-6xl font-black font-sans block select-auto w-max">Blender 4.2 LTS</h1>
-        <p className="my-3 text-lg">Packed with features and improvements ready to <br /> power your projects for the next two years.</p>
+        <p className="my-3 text-lg sm:w-4/5 min-[800px]:w-1/2 lg:w-1/3">Packed with features and improvements ready to <wbr /> power your projects for the next two years.</p>
         <div className="flex gap-3 select-none">
           <a href="https://www.blender.org/download/" className="">
             <button className="bg-zinc-300 hover:bg-zinc-50 transition text-black px-8 py-1 rounded-md font-medium">Download</button>

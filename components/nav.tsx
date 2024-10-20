@@ -1,11 +1,13 @@
+
 import Image from "next/image";
 
 export default function Nav() {
   return (
-    <nav className="bg-white">
+    <nav className="bg-white top-0 z-50"
+    >
         <section className="flex justify-between items-center bg-white w-full text-black md:px-14 px-3 py-4 max-w-screen-2xl mx-auto">
           <div className=" ">
-            <Image src='/blender_logo.png' alt="blender logo" width={120} height={10} className="object-contain size-auto" />
+            <Image src='/blender_logo.png' id="b3d" alt="blender logo" width={120} height={10} className="object-contain size-auto" />
           </div>
 
           <div className="">
@@ -16,7 +18,7 @@ export default function Nav() {
               <li className="">Get Involved</li>
               <li className="">About</li>
               <li className="">Jobs</li>
-              <li> <button className="bg-blue-500 text-white px-3 py-1 rounded-md shadow-md shadow-blue-500/80">💖Donate</button></li>
+              <li> <button className="glow bg-blue-500 px-3 py-1 rounded-md text-white hover:bg-blue-600 transition">💖Donate</button></li>
             </ul>
           </div>
       </section>

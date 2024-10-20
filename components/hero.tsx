@@ -53,7 +53,7 @@ export default function Hero() {
           <button className='bg-blue-500 text-white w-max px-4 py-0.5 rounded-sm text-sm shadow shadow-black/50 select-none' onClick={addCube}>Add Cube</button>
         </div>
       }
-      <Canvas id='canvas' onMouseDown={reset} onContextMenu={handleCanvasClick}>
+      <Canvas id='canvas' onMouseDown={reset} onContextMenu={handleCanvasClick} frameloop='demand'>
 
         {!del ? <mesh onContextMenu={handleCubeClick}>
           <boxGeometry args={[1,1,1]} />
@@ -66,7 +66,7 @@ export default function Hero() {
         </group>
 
         <group name='UI'>
-          <OrbitControls minZoom={4} maxZoom={5} enablePan={false} enableZoom={false} enableDamping={false} />
+          <OrbitControls enablePan={false} enableZoom={false} enableDamping={false} />
           <PerspectiveCamera makeDefault position={[4, 4, 4]} />
 
           <BlenderGrid />
