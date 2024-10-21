@@ -6,20 +6,24 @@ import { Analytics } from "@vercel/analytics/react"
 const roboto = Roboto({weight: ['100', '300', '400', '500', '700', '900'], variable: '--font-roboto', subsets: ['latin']})
 
 export const metadata: Metadata = {
-  title: "Blender",
+  title: "Blender | b3d",
   description: "Redesigning landing page of Blender website | 3d | b3d | blender | blender3d",
   keywords: ['blender', 'b3d', 'blender3d', '3d', 'redesign'],
   publisher: 'zsphinx',
   creator: 'zsphinx',
+  abstract: 'Redesigning Blender Website landing page',
+  category: '3d',
   openGraph: {
-    title: 'Blender',
+    title: 'Blender | b3d',
     description: 'Redesigning landing page of Blender website | 3d | b3d | blender | blender3d',
     images: [{
       url: 'https://b3d.vercel.app/thumbnail.jpg',
       alt: 'Blender 3d',
       width: 750,
       height: 500,
-    }]
+    }],
+    type: 'website',
+    url: 'https://b3d.vercel.app'
   },
   facebook: {
     appId: '1719215081802374',
@@ -29,6 +33,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     creator: '@zsphinxyz'
   },
+
+  verification: {
+    google: "ce41r4Xfw_7tSNJDGSIs-BYCCylzs0MbHdO0s_QDxAg"
+  }
 
 };
 
