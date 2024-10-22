@@ -6,15 +6,15 @@ import { Analytics } from "@vercel/analytics/react"
 const roboto = Roboto({weight: ['100', '300', '400', '500', '700', '900'], variable: '--font-roboto', subsets: ['latin']})
 
 export const metadata: Metadata = {
-  title: "Blender | b3d",
+  title: "b3d",
   description: "Redesigning landing page of Blender website | 3d | b3d | blender | blender3d",
-  keywords: ['blender', 'b3d', 'blender3d', '3d', 'redesign'],
+  keywords: ['blender', 'b3d', 'blender3d', '3d', 'redesign', '3d blender', 'webgl', 'threejs', 'react-three-fiber', '3d react', '3d web'],
   publisher: 'zsphinx',
   creator: 'zsphinx',
   abstract: 'Redesigning Blender Website landing page',
   category: '3d',
   openGraph: {
-    title: 'Blender | b3d',
+    title: 'b3d',
     description: 'Redesigning landing page of Blender website | 3d | b3d | blender | blender3d',
     images: [{
       url: 'https://b3d.vercel.app/thumbnail.jpg',

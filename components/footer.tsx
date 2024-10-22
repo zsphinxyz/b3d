@@ -4,7 +4,7 @@ import React from 'react'
 function Block({text, href, title}: {text:string, href:string, title:string}) {
   return(
     <li title={title} className="hover:underline inline">
-      <a href={href} className="text-neutral-400/80 font-light text-sm">{text}</a> <br />
+      <a href={href} className="text-neutral-400 font-light text-sm">{text}</a> <br />
     </li>
   )
 }
