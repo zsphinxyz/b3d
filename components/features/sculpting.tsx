@@ -21,7 +21,7 @@ export default function Sculpting() {
 
       <FadeIn className="basis-1/2 min-h-full h-80 lg:h-96 select-none self-stretch relative">
       {/* https://studio.blender.org/training/stylized-character-workflow/5d289585e50af1f7c9c6df35/ */}
-        <video autoPlay loop muted width={640} height={360} src="/sculpt.mp4" className="h-full w-full object-cover object-left-top">
+        <video autoPlay loop muted width={640} height={360} src="/sculpt.mp4" poster="/sculpt_thumbnail.jpg" className="h-full w-full object-cover object-left-top">
           {/* <source src="/sim.mov" type="video/mp4" /> */}
           Your Browser doens&apos;t support this video. 
         </video>

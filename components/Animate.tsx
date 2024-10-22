@@ -18,8 +18,8 @@ export function FadeIn({children, className}: {children: React.ReactNode, classN
 export function SlideIn({children, className, timeOffset}: {children: React.ReactNode, className?: string, timeOffset:number}) {
   return(
     <motion.li className={className}
-      initial={{x: -25, opacity: 0, filter: 'blur(10px)'}}
-      whileInView={{opacity: 1, x:0, filter: ['blur(5px)', 'blur(0px)']}}
+      initial={{x: -25, opacity: 0 }}
+      whileInView={{opacity: 1, x:0}}
       viewport={{amount: 0.8, once: true}}
       transition={{duration: 0.25, delay: timeOffset}}
     >
@@ -31,8 +31,8 @@ export function SlideIn({children, className, timeOffset}: {children: React.Reac
 export function TextAnimation({children, className}: {children: React.ReactNode, className?: string}) {
   return(
     <motion.h1 className={className + ''}
-      initial={{opacity: 0, filter: 'blur(10px)'}}
-      whileInView={{opacity: [0,0.2,0.4,0.5,1], filter: 'blur(0px)'}}
+      initial={{opacity: 0}}
+      whileInView={{opacity: [0,0.2,0.4,0.5,1],}}
       viewport={{amount: 'all', once: true}}
       transition={{duration: 0.5, delay: 0.2}}
     >
@@ -54,8 +54,8 @@ export function TextBlurAni({className, text}: { className?: string, text:string
         <motion.span
           className=''
           key={i}
-          initial={{opacity: 0, scale: 2, filter: 'blur(50px)'}}
-          whileInView={{opacity: [0,0.5,1], scale: 1, filter: 'blur(0px)'}}
+          initial={{opacity: 0, scale: 2}}
+          whileInView={{opacity: [0,0.5,1], scale: 1}}
           viewport={{once: true, amount: 'all'}}
           transition={{delay: i/15}}
         >{letter}</motion.span>

@@ -4,6 +4,7 @@ import Rendering from "./features/rendering";
 import Modeling from "./features/modeling";
 import Sculpting from "./features/sculpting";
 import AniRig from "./features/aniRig";
+import Simulation from "./features/simulation";
 
 export default function Features() {
   return (
@@ -18,6 +19,7 @@ export default function Features() {
       <hr className="my-10" />
       <AniRig />
       <hr className="my-10" />
+      <Simulation />
       
     </section>
   )

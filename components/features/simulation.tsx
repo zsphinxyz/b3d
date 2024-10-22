@@ -22,7 +22,7 @@ export default function Simulation() {
       </FadeIn>
 
       <FadeIn className="basis-1/2 min-h-full h-80 lg:h-96 select-none self-stretch relative">
-        <video autoPlay muted loop width={640} height={360} src="/muzzle_flash.mp4" className="h-full w-full object-cover object-left">
+        <video autoPlay muted loop width={640} height={360} poster="/sim_thumbnail.jpg" src="/muzzle_flash.mp4" className="h-full w-full object-cover object-left">
           {/* <source src="/sim.mov" type="video/mp4" /> */}
           Your Browser cant play this video.
         </video>

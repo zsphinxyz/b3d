@@ -7,22 +7,31 @@ import More from "@/components/more";
 import FreeSoftware from "@/components/freeSoftware";
 import Industry from "@/components/industry";
 import Footer from "@/components/footer";
+import { Suspense } from "react";
+import Loading from "./loading";
+import GoTop from "@/components/gotop";
 
 export default function Home() {
   return (
     <main className="w-full min-h-dvh h-[20dvh] bg-neutral-100 flex flex-col overflow-y-scroll snap-y snap-proximity scroll-smooth">
       <Nav />
 
-      <a href="/#b3d" title="Go to Top" className="size-8 rounded-full text-white opacity-60 hover:opacity-90 bg-neutral-500 hover:scale-105 transition fixed right-5 bottom-16 sm:bottom-10 flex shrink-0 items-center justify-center z-50 ">
-        ▲
-      </a>
+      <GoTop />
 
       <section className="cursor-default w-full flex flex-col gap-10 max-w-screen-2xl mx-auto ">
-        <Hero />
+        <Suspense fallback={<Loading />}>
+          <Hero />
+        </Suspense>
 
         <Free /> 
-        <Features />
-        <More />
+
+        <Suspense fallback={<Loading />}>
+          <Features />
+        </Suspense>
+
+        <Suspense fallback={<Loading />}>
+          <More />
+        </Suspense>
       </section>
 
       <section className="bg-black w-full h-1 snap-start snap-normal select-none pointer-events-none">
@@ -31,9 +40,17 @@ export default function Home() {
 
       <section className="bg-black text-neutral-300">
         <section className="max-w-screen-2xl mx-auto ">
-          <FreeSoftware />
+          <Suspense fallback={<Loading />}>
+            <FreeSoftware />
+          </Suspense>
+
+        <Suspense fallback={<Loading />}>
           <Industry />
+        </Suspense>
+
+        <Suspense fallback={<Loading />}>
           <News />
+        </Suspense>
         </section>
       </section>
 

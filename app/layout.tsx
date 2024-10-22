@@ -52,7 +52,7 @@ export default function RootLayout({
       <body
         className={`${roboto.className} antialiased overflow-y-hidden`}
       >
-        {children}
+          {children}
       </body>
     </html>
   );

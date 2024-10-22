@@ -23,7 +23,7 @@ export default function Rendering() {
     <FadeIn className="basis-1/2 relative select-none h-80 lg:h-96">
       <div className="transparent absolute inset-0" />
       <div className="contents size-20 overflow-hidden ">
-        <Image loading="eager" draggable={false} src="/render.jpg" alt="Cycles" width={500} height={500} quality={100} priority className="mask w-full h-full max-h-[500px] object-cover object-center" />
+        <Image loading="eager" draggable={false} src="/render.jpg" alt="Cycles" width={500} height={500} priority className="mask w-full h-full max-h-[500px] object-cover object-center" />
         <div className="borderCorner" />
       </div>
     </FadeIn>
