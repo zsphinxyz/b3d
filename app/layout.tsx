@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'b3d',
     description: 'Redesigning landing page of Blender website | 3d | b3d | blender | blender3d',
+    siteName: 'b3d',
     images: [{
       url: 'https://b3d.vercel.app/thumbnail.jpg',
       alt: 'Blender 3d',
