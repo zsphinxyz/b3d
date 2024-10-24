@@ -49,7 +49,7 @@ export default function UI() {
           </span>
         </div>
 
-        <div className=" h-5 rounded-sm text-xs leading-5 flex gap-1 items-center">
+        <div className=" h-5 rounded-sm text-xs leading-5 flex gap-1 items-center mr-5">
           <span title='visibility' className="bg-[#141414] hidden rounded-sm hover:bg-[#313131] min-[420px]:flex items-center">
             <Image draggable={false} src="/icons/visual_selection_selectable.svg" alt="visual selection" width={22} height={22} />
             <Image draggable={false} src="/icons/downarrow_hlt.svg" alt="downarrow" width={18} height={18} className='-ml-1' />
