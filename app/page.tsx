@@ -13,7 +13,7 @@ import GoTop from "@/components/gotop";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-dvh h-[20dvh] bg-neutral-100 flex flex-col overflow-y-scroll snap-y snap-proximity scroll-smooth">
+    <main className="w-full min-h-dvh h-[20dvh] bg-neutral-100 flex flex-col overflow-y-scroll scroll-smooth">{/* snap-y snap-proximity */}
       <Nav />
 
       <GoTop />
@@ -34,9 +34,9 @@ export default function Home() {
         </Suspense>
       </section>
 
-      <section className="bg-black w-full h-1 snap-start snap-normal select-none pointer-events-none">
+      {/* <section className="bg-black w-full h-1 snap-start snap-normal select-none pointer-events-none">
         .
-      </section>
+      </section> */}
 
       <section className="bg-black text-neutral-300">
         <section className="max-w-screen-2xl mx-auto ">
